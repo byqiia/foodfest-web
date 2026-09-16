@@ -1,10 +1,13 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #F9F9FB;
     color: #1A1D20;
     margin: 0;
     padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -56,7 +59,7 @@ body {
     background: linear-gradient(rgba(240, 236, 233, 0.85), rgba(240, 236, 233, 0.85)), url('food.jpeg');
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 180px); 
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,9 +112,8 @@ body {
     margin: 5px;
 }
 
-
-.main-content {
-    min-height: calc(100vh - 200px);
+.main-content, .konten {
+    flex: 1;
 }
 
 .konten {
@@ -190,4 +192,5 @@ body {
     padding: 20px;
     font-size: 13px;
     border-top: 3px solid #E09F3E;
+    margin-top: auto;
 }
