@@ -2,101 +2,272 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nusantara Food Fest 2026</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Dasar sesuai materi slide */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9F9FB;
+            color: #1A1D20;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigasi */
+        .navbar {
+            background-color: #6B1D2F;
+            border-bottom: 4px solid #E09F3E;
+            padding: 15px 40px;
+            overflow: auto;
+        }
+
+        .logo {
+    float: left;
+    color: #F9F9FB;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 7px;
+    font-family: 'Berkshire Swash', serif; 
+}
+
+       .menu {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px; 
+}
+
+        .menu li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .menu li a {
+    color: #F9F9FB;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 7px 10px;
+    font-weight: bold; 
+    font-family: 'Georgia', serif;
+}
+
+        .tombol-nav {
+            color: #fafbfd !important;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Area Banner Utama */
+       .banner {
+    text-align: center;
+    /* Memberi lapisan warna krem transparan di atas gambar */
+    background: linear-gradient(rgba(240, 236, 233, 0.85), rgba(240, 236, 233, 0.85)), 
+                url('food.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 90px 20px;
+    border-bottom: 1px solid #DDD;
+}
+
+        .badge {
+            background-color: #E09F3E;
+            color: #1A1D20;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .banner h1 {
+            color: #6B1D2F;
+            font-size: 36px;
+            margin: 15px 0 10px 0;
+        }
+
+        .banner p {
+            color: #555;
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+
+        .tombol-banner {
+            display: inline-block;
+            background-color: #6B1D2F;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .tombol-banner-outline {
+            display: inline-block;
+            border: 2px solid #6B1D2F;
+            color: #6B1D2F;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        /* Area Konten */
+        .konten {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .judul-bagian {
+            color: #6B1D2F;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .subjudul {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* Kartu Pilihan Makanan */
+        .kartu-baris {
+            overflow: auto;
+        }
+
+        .kartu {
+            float: left;
+            width: 28%;
+            margin: 1.5%;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-top: 4px solid #6B1D2F;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .kartu h3 {
+            color: #6B1D2F;
+            margin-top: 0;
+        }
+
+        .kartu p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .kartu-item {
+            font-size: 12px;
+            background-color: #F9F9FB;
+            padding: 8px;
+            border-left: 3px solid #E09F3E;
+            margin-top: 15px;
+        }
+
+        /* Informasi Jadwal */
+        .kotak-jadwal {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-left: 5px solid #E09F3E;
+            margin: 12px auto;
+            padding: 15px 20px;
+            max-width: 600px;
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .kotak-jadwal strong {
+            color: #6B1D2F;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1A1D20;
+            color: #AAA;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            margin-top: 50px;
+            border-top: 3px solid #E09F3E;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigasi Melayang -->
-    <header>
-        <div class="nav-container">
-            <span class="logo">Savor & Heritage</span>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Beranda</a></li>
-                    <li><a href="#highlights">Zona Kuliner</a></li>
-                    <li><a href="#schedule">Timeline</a></li>
-                    <li><a href="contact.html" class="nav-btn">Hubungi Kami</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Navigasi -->
+    <div class="navbar">
+        <div class="logo">Savor & Heritage</div>
+        <ul class="menu">
+            <li><a href="#banner">Beranda</a></li>
+            <li><a href="#kuliner">Zona Kuliner</a></li>
+            <li><a href="#jadwal">Jadwal</a></li>
+            <li><a href="contact.html" class="tombol-nav">Hubungi Kami</a></li>
+        </ul>
+    </div>
 
-    <!-- Hero Banner Utama ala Landing Page Event -->
-    <section id="hero">
-        <span class="tagline">FESTIVAL KULINER TERBESAR</span>
+    <!-- Area Banner -->
+    <div id="banner" class="banner">
+        <span class="badge">FESTIVAL KULINER TERBESAR</span>
         <h1>Jelajah Cita Rasa Nusantara</h1>
         <p>Rayakan kekayaan rasa nusantara bersama 50+ tenant legendaris dan kreasi kuliner modern.</p>
-        <div class="hero-actions">
-            <a href="#highlights" class="btn-primary">Lihat Kuliner</a>
-            <a href="#schedule" class="btn-secondary">Jadwal Event</a>
+        <div>
+            <a href="#kuliner" class="tombol-banner">Lihat Kuliner</a>
+            <a href="#jadwal" class="tombol-banner-outline">Jadwal Event</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Pilihan Kuliner (Layout Grid Kartu ala WKFEST) -->
-    <section id="highlights" class="container">
-        <h2 class="section-title">Zona Kuliner Unggulan</h2>
-        <p class="section-subtitle">Temukan sajian khas dari berbagai penjuru tanah air</p>
-        
-        <div class="grid-cards">
-            <div class="card">
-                <span class="badge">Autentik</span>
+    <!-- Zona Kuliner -->
+    <div id="kuliner" class="konten">
+        <h2 class="judul-bagian">Pilihan Zona Kuliner</h2>
+        <p class="subjudul">Cicipi aneka sajian khas nusantara terbaik</p>
+
+        <div class="kartu-baris">
+            <div class="kartu">
                 <h3>Zona Tradisional</h3>
-                <p>Kelezatan resep warisan leluhur nusantara.</p>
-                <div class="card-items">Rendang Padang, Gudeg Jogja, Sate Maranggi, Soto Betawi</div>
+                <p>Kelezatan resep warisan leluhur nusantara yang legendaris.</p>
+                <div class="kartu-item"><strong>Menu:</strong> Rendang, Gudeg, Sate Maranggi</div>
             </div>
 
-            <div class="card">
-                <span class="badge">Jajanan Populer</span>
+            <div class="kartu">
                 <h3>Zona Street Food</h3>
-                <p>Deretan kuliner jalanan khas yang gurih dan pedas.</p>
-                <div class="card-items">Seblak Bandung, Kerak Telor, Batagor Krispi, Tahu Gejrot</div>
+                <p>Deretan kuliner jalanan khas yang gurih, pedas, dan krispi.</p>
+                <div class="kartu-item"><strong>Menu:</strong> Seblak, Batagor, Kerak Telor</div>
             </div>
 
-            <div class="card">
-                <span class="badge">Manis & Segar</span>
-                <h3>Zona Dessert & Minuman</h3>
-                <p>Penyegar dahaga dengan racikan manis tradisional.</p>
-                <div class="card-items">Es Teler Durian, Selendang Mayang, Kopi Tubruk Gayo</div>
+            <div class="kartu">
+                <h3>Zona Manis & Segar</h3>
+                <p>Penyegar dahaga dengan aneka racikan manis khas daerah.</p>
+                <div class="kartu-item"><strong>Menu:</strong> Es Teler, Selendang Mayang, Kopi</div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Timeline Jadwal Event -->
-    <section id="schedule" class="container">
-        <h2 class="section-title">Timeline Acara</h2>
-        <p class="section-subtitle">Catat tanggal dan waktunya agar tidak terlewat</p>
+    <!-- Jadwal Acara -->
+    <div id="jadwal" class="konten">
+        <h2 class="judul-bagian">Informasi Jadwal Acara</h2>
+        <p class="subjudul">Catat tanggal dan jam pelaksanaannya</p>
 
-        <div class="timeline-box">
-            <div class="timeline-item">
-                <div class="time-date">25 Sept</div>
-                <div class="time-detail">
-                    <h4>Grand Opening & Food Tasting</h4>
-                    <p>10.00 - 22.00 WIB • Area Utama Event Center</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="time-detail">
-                    <h4>Chef Demo & Street Food Battle</h4>
-                    <p>10.00 - 22.00 WIB • Panggung Budaya</p>
-                </div>
-                <div class="time-date">26 Sept</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time-date">27 Sept</div>
-                <div class="time-detail">
-                    <h4>Nusantara Gala & Foodie Awards</h4>
-                    <p>10.00 - 22.00 WIB • Lapangan Utama</p>
-                </div>
-            </div>
+        <div class="kotak-jadwal">
+            <strong>25 September 2026:</strong> Grand Opening & Food Tasting (10.00 - 22.00 WIB)
         </div>
-    </section>
+        <div class="kotak-jadwal">
+            <strong>26 September 2026:</strong> Chef Demo & Street Food Battle (10.00 - 22.00 WIB)
+        </div>
+        <div class="kotak-jadwal">
+            <strong>27 September 2026:</strong> Nusantara Gala & Foodie Awards (10.00 - 22.00 WIB)
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Nusantara Food Fest • Kolaborasi Web Event</p>
-    </footer>
+    <div class="footer">
+        <p>&copy; 2026 Nusantara Food Fest - Tugas Kolaborasi Web</p>
+    </div>
 
 </body>
 </html>
