@@ -4,58 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savor & Heritage Culinary Festival 2026</title>
+    <style>
+        /* CSS Modern Heritage Palette */
+        body {
+            background-color: #F9F9FB; /* Off-White */
+            color: #1A1D20;            /* Dark Slate */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigasi */
+        .header {
+            background-color: #6B1D2F; /* Deep Maroon/Burgundy */
+            color: #F9F9FB;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 1.1em;
+            color: #E09F3E; /* Warm Amber */
+        }
+
+        .nav {
+            margin-top: 20px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .nav a {
+            color: #F9F9FB;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border: 1px solid #E09F3E;
+        }
+
+        /* Bagian Konten (Hero, Highlights, Schedule) */
+        .section {
+            background-color: #FFFFFF;
+            margin: 20px auto;
+            padding: 25px;
+            max-width: 800px;
+            border-left: 4px solid #6B1D2F;
+        }
+
+        .section h2 {
+            color: #6B1D2F;
+            margin-top: 0;
+        }
+
+        /* List Zona Kuliner */
+        ul.zona-list {
+            padding-left: 20px;
+        }
+
+        ul.zona-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #1A1D20;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Header & Navigasi -->
-    <header>
+    <div class="header">
         <h1>Savor & Heritage</h1>
         <p>A Modern Celebration of Archipelago Flavors</p>
-        <nav>
+        <div class="nav">
             <ul>
-                <li><a href="#about">Tentang Event</a></li>
+                <li><a href="#hero">Tentang Event</a></li>
                 <li><a href="#highlights">Kuliner Pilihan</a></li>
                 <li><a href="#schedule">Jadwal & Lokasi</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <hr>
+        </div>
+    </div>
 
     <!-- Hero Section -->
-    <section id="hero">
+    <div id="hero" class="section">
         <h2>Jelajah Cita Rasa Kuliner Nusantara!</h2>
         <p>Nikmati lebih dari 50 tenant kuliner legendaris dan kekinian dalam satu festival meriah.</p>
-    </section>
+    </div>
 
     <hr>
 
     <!-- Highlight Kuliner -->
-    <section id="highlights">
+    <div id="highlights" class="section">
         <h2>Pilihan Zona Kuliner</h2>
-        <ul>
+        <ul class="zona-list">
             <li><strong>Zona Tradisional:</strong> Rendang, Gudeg, Sate Maranggi, Soto Betawi</li>
             <li><strong>Zona Street Food:</strong> Seblak Bandung, Kerak Telor, Batagor</li>
             <li><strong>Zona Dessert & Minuman:</strong> Es Teler, Selendang Mayang, Kopi Lokal</li>
         </ul>
-    </section>
+    </div>
 
     <hr>
 
     <!-- Jadwal & Informasi -->
-    <section id="schedule">
+    <div id="schedule" class="section">
         <h2>Informasi Acara</h2>
-        <p><strong>Tanggal:</strong> 25 - 27 September 2026</p>
-        <p><strong>Waktu:</strong> 10.00 - 22.00 WIB</p>
+        <p><strong>Tanggal:</strong> 25 – 27 September 2026</p>
+        <p><strong>Waktu:</strong> 10.00 – 22.00 WIB</p>
         <p><strong>Layanan/Lokasi:</strong> Lapangan Utama Event Center</p>
-    </section>
+    </div>
 
     <hr>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Nusantara Food Fest - Tugas Kolaborasi Web</p>
-    </footer>
+    <div class="footer">
+        <p>&copy; 2026 Nusantara Food Fest — Tugas Kolaborasi Web</p>
+    </div>
 
 </body>
 </html>
