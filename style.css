@@ -1,265 +1,193 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
 
 body {
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #F9F9FB;
     color: #1A1D20;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header & Navigasi Sticky */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.navbar {
     background-color: #6B1D2F;
-    border-bottom: 3px solid #E09F3E;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.nav-container {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-bottom: 4px solid #E09F3E;
+    padding: 15px 40px;
+    overflow: auto;
 }
 
 .logo {
-    font-weight: 800;
+    float: left;
     color: #F9F9FB;
-    letter-spacing: 1.5px;
-    font-size: 1.2rem;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 7px;
+    font-family: 'Berkshire Swash', serif; 
 }
 
-nav ul {
-    display: flex;
+.menu {
+    float: right;
     list-style: none;
-    gap: 16px;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px; 
 }
 
-nav ul li a {
-    color: #F9F9FB;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 6px 12px;
-    transition: 0.2s ease;
-}
-
-nav ul li a:hover {
-    color: #E09F3E;
-}
-
-.nav-btn {
-    background-color: #E09F3E !important;
-    color: #1A1D20 !important;
-    border-radius: 6px;
-    font-weight: 600;
-}
-
-/* Hero Section Besar */
-#hero {
-    text-align: center;
-    padding: 85px 20px;
-    background: linear-gradient(rgba(107, 29, 47, 0.04), rgba(107, 29, 47, 0.01));
-    border-bottom: 1px solid #E5E5EB;
-}
-
-.tagline {
+.menu li {
     display: inline-block;
-    background-color: #E09F3E;
-    color: #1A1D20;
-    padding: 5px 14px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
+    margin-left: 15px;
 }
 
-#hero h1 {
-    font-size: 2.7rem;
-    color: #6B1D2F;
-    margin-bottom: 16px;
-    font-weight: 800;
-}
-
-#hero p {
-    font-size: 1.15rem;
-    color: #555;
-    max-width: 620px;
-    margin: 0 auto 30px auto;
-}
-
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-
-.btn-primary, .btn-secondary {
+.menu li a {
+    color: #F9F9FB;
     text-decoration: none;
-    padding: 12px 26px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.2s ease;
+    font-size: 18px;
+    padding: 7px 10px;
+    font-weight: bold; 
+    font-family: 'Georgia', serif;
 }
 
-.btn-primary {
-    background-color: #6B1D2F;
-    color: #F9F9FB;
+.tombol-nav {
+    color: #fafbfd !important;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
-.btn-primary:hover {
-    background-color: #521523;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #1A1D20;
-    border: 2px solid #6B1D2F;
-}
-
-.btn-secondary:hover {
-    background-color: #6B1D2F;
-    color: #F9F9FB;
-}
-
-/* Kontainer Standar */
-.container {
-    max-width: 1050px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.section-title {
+.banner {
     text-align: center;
-    color: #6B1D2F;
-    font-size: 1.8rem;
-    margin-bottom: 6px;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #777;
-    margin-bottom: 36px;
-    font-size: 0.95rem;
-}
-
-/* Grid Kartu Makanan */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
-
-.card {
-    background: #FFFFFF;
-    padding: 28px;
-    border-radius: 12px;
-    border: 1px solid #ECECF0;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    background: linear-gradient(rgba(240, 236, 233, 0.85), rgba(240, 236, 233, 0.85)), url('food.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 180px); 
     display: flex;
     flex-direction: column;
-    position: relative;
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #DDD;
 }
 
 .badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #FDF3E5;
-    color: #B87B20;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 10px;
+    background-color: #E09F3E;
+    color: #1A1D20;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.banner h1 {
+    color: #6B1D2F;
+    font-size: 36px;
+    margin: 15px 0 10px 0;
+}
+
+.banner p {
+    color: #555;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.tombol-banner {
+    display: inline-block;
+    background-color: #6B1D2F;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.tombol-banner-outline {
+    display: inline-block;
+    border: 2px solid #6B1D2F;
+    color: #6B1D2F;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+
+.main-content {
+    min-height: calc(100vh - 200px);
+}
+
+.konten {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.judul-bagian {
+    color: #6B1D2F;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.subjudul {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.kartu-baris {
+    overflow: auto;
+}
+
+.kartu {
+    float: left;
+    width: 28%;
+    margin: 1.5%;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-top: 4px solid #6B1D2F;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.kartu h3 {
+    color: #6B1D2F;
+    margin-top: 0;
+}
+
+.kartu p {
+    font-size: 13px;
+    color: #666;
+}
+
+.kartu-item {
+    font-size: 12px;
+    background-color: #F9F9FB;
+    padding: 8px;
+    border-left: 3px solid #E09F3E;
+    margin-top: 15px;
+}
+
+.kotak-jadwal {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-left: 5px solid #E09F3E;
+    margin: 12px auto;
+    padding: 15px 20px;
+    max-width: 600px;
+    text-align: left;
     border-radius: 4px;
 }
 
-.card h3 {
+.kotak-jadwal strong {
     color: #6B1D2F;
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    margin-top: 8px;
 }
 
-.card p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 18px;
-}
-
-.card-items {
-    margin-top: auto;
-    padding-top: 14px;
-    border-top: 1px dashed #E5E5EB;
-    font-size: 0.85rem;
-    color: #1A1D20;
-    font-weight: 500;
-}
-
-/* Timeline Layout */
-.timeline-box {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.timeline-item {
-    background: #FFFFFF;
-    border: 1px solid #ECECF0;
-    border-left: 4px solid #E09F3E;
-    padding: 18px 24px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.time-date {
-    background-color: #6B1D2F;
-    color: #F9F9FB;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.time-detail h4 {
-    color: #1A1D20;
-    font-size: 1.05rem;
-    margin-bottom: 4px;
-}
-
-.time-detail p {
-    color: #777;
-    font-size: 0.85rem;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 24px;
+.footer {
     background-color: #1A1D20;
-    color: #999;
-    font-size: 0.85rem;
+    color: #AAA;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
     border-top: 3px solid #E09F3E;
-    margin-top: 70px;
 }
