@@ -9,37 +9,40 @@ body {
     min-height: 100vh;
 }
 
-.navbar {
-    background-color: #6B1D2F !important;
+.navbar-custom {
+    background-color: #6B1D2F;
     border-bottom: 4px solid #E09F3E;
-    padding: 12px 20px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar-brand {
-    color: #F9F9FB !important;
-    font-size: 26px;
-    font-family: 'Berkshire Swash', serif; 
-}
-
-.nav-link {
-    color: #F9F9FB !important;
-    font-size: 16px;
-    font-family: 'Georgia', serif;
-    padding: 8px 12px !important;
-}
-
-.tombol-nav {
-    color: #FFFFFF !important;
-    background-color: #E09F3E;
-    padding: 8px 16px;
-    border-radius: 4px;
+.logo {
+    color: #F9F9FB;
+    font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
 }
 
-.tombol-nav:hover {
-    background-color: #c88b32;
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li a {
+    color: #F9F9FB;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menu li a:hover, .tombol-nav {
+    color: #F9F9FB;
+    opacity: 0.9;
 }
 
 .banner {
@@ -59,23 +62,45 @@ body {
 .badge-custom {
     background-color: #E09F3E;
     color: #1A1D20;
-    padding: 6px 14px;
-    font-size: 13px;
+    padding: 5px 14px;
+    font-size: 11px;
     font-weight: bold;
     border-radius: 12px;
+    display: inline-block;
 }
 
 .banner h1 {
     color: #6B1D2F;
-    font-size: 36px;
+    font-size: 34px;
+    font-weight: bold;
     margin: 15px 0 10px 0;
 }
 
 .banner p {
     color: #555;
-    font-size: 16px;
+    font-size: 14px;
     max-width: 600px;
     margin: 0 auto 25px auto;
+}
+
+.tombol-banner, .tombol-banner-outline {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 4px;
+}
+
+.tombol-banner {
+    background-color: #6B1D2F;
+    color: #FFFFFF;
+}
+
+.tombol-banner-outline {
+    border: 2px solid #6B1D2F;
+    color: #6B1D2F;
 }
 
 .main-content, .konten {
@@ -84,21 +109,21 @@ body {
 
 .konten {
     max-width: 1000px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
     text-align: center;
 }
 
 .judul-bagian {
     color: #6B1D2F;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .subjudul {
     color: #777;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 30px;
 }
 
@@ -115,12 +140,9 @@ body {
     border: 1px solid #E0E0E0;
     border-top: 4px solid #6B1D2F;
     border-radius: 6px;
-    padding: 22px 18px;
+    padding: 25px 20px;
     text-align: left;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .kartu-kontak {
@@ -136,7 +158,7 @@ body {
 
 .kartu p, .kartu-kontak p {
     font-size: 13px;
-    color: #555;
+    color: #666;
     line-height: 1.5;
 }
 
@@ -151,21 +173,9 @@ body {
 .tombol-detail {
     display: inline-block;
     background-color: #6B1D2F;
-    color: #FFFFFF !important;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 13px;
-    margin-top: auto;
-}
-
-.tombol-detail-outline {
-    display: inline-block;
-    border: 2px solid #6B1D2F;
-    color: #6B1D2F !important;
-    text-decoration: none;
-    padding: 7px 15px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 13px;
@@ -177,9 +187,10 @@ body {
     border-left: 5px solid #E09F3E;
     margin: 12px auto;
     padding: 15px 20px;
-    max-width: 600px;
+    max-width: 650px;
     text-align: left;
     border-radius: 4px;
+    font-size: 13px;
 }
 
 .kotak-jadwal strong {
@@ -190,144 +201,20 @@ body {
     background-color: #1A1D20;
     color: #AAA;
     text-align: center;
-    padding: 20px;
-    font-size: 13px;
+    padding: 15px;
+    font-size: 12px;
     border-top: 3px solid #E09F3E;
     margin-top: auto;
 }
 
-@media (max-width: 768px) {
-    .banner h1 {
-        font-size: 26px;        
-    }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F9F9FB;
-    color: #1A1D20;
+.footer p {
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-.navbar {
-    background-color: #6B1D2F;
-    border-bottom: 4px solid #E09F3E;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    color: #F9F9FB;
-    font-size: 26px;
-    font-weight: bold;
-    font-family: 'Berkshire Swash', serif; 
-}
-
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.menu li a {
-    color: #F9F9FB;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    padding: 7px 10px;
-}
-
-.tombol-nav {
-    color: #F9F9FB !important;
-    font-weight: bold;
-}
-.konten {
-    flex: 1;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.judul-bagian {
-    color: #6B1D2F;
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.subjudul {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 30px;
-}
-
-.kartu-baris {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.kartu-kontak {
-    flex: 1 1 280px;
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
-    border-top: 4px solid #6B1D2F;
-    border-radius: 6px;
-    padding: 25px 15px;
-    text-align: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.kartu-kontak h3 {
-    color: #6B1D2F;
-    margin-top: 0;
-    font-size: 18px;
-}
-
-.kartu-kontak p {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.tombol-detail {
-    display: inline-block;
-    background-color: #6B1D2F;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 13px;
-    align-self: center;
-}
-
-.footer {
-    background-color: #1A1D20;
-    color: #AAA;
-    text-align: center;
-    padding: 20px;
-    font-size: 13px;
-    border-top: 3px solid #E09F3E;
-    margin-top: auto;
-}
 @media (max-width: 768px) {
-    .navbar {
+    .navbar-custom {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
         padding: 15px 20px;
     }
     
@@ -337,11 +224,11 @@ body {
         gap: 10px;
     }
 
-    .kartu-kontak {
-        flex: 1 1 100%;
+    .banner h1 {
+        font-size: 26px;
     }
-}
+
     .kartu, .kartu-kontak {
-        flex: 1 1 100%;          
+        flex: 1 1 100%;
     }
 }
