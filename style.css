@@ -9,44 +9,37 @@ body {
     min-height: 100vh;
 }
 
-/* 1. PERBAIKAN FLEXBOX PADA NAVBAR */
 .navbar {
-    background-color: #6B1D2F;
+    background-color: #6B1D2F !important;
     border-bottom: 4px solid #E09F3E;
-    padding: 15px 40px;
-    display: flex;               /* Menggunakan Flexbox */
-    justify-content: space-between; /* Memisahkan logo ke kiri dan menu ke kanan */
-    align-items: center;         /* Meratakan elemen secara vertikal */
+    padding: 12px 20px;
 }
 
-.logo {
-    color: #F9F9FB;
-    font-size: 30px;
-    font-weight: bold;
+.navbar-brand {
+    color: #F9F9FB !important;
+    font-size: 26px;
     font-family: 'Berkshire Swash', serif; 
 }
 
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;               /* Flexbox untuk deretan menu */
-    gap: 20px;                   /* Jarak antar menu */
-}
-
-.menu li a {
-    color: #F9F9FB;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 7px 10px;
-    font-weight: bold; 
+.nav-link {
+    color: #F9F9FB !important;
+    font-size: 16px;
     font-family: 'Georgia', serif;
+    padding: 8px 12px !important;
 }
 
 .tombol-nav {
-    color: #fafbfd !important;
+    color: #FFFFFF !important;
+    background-color: #E09F3E;
+    padding: 8px 16px;
     border-radius: 4px;
     font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tombol-nav:hover {
+    background-color: #c88b32;
 }
 
 .banner {
@@ -59,15 +52,15 @@ body {
     flex-direction: column;      
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
     border-bottom: 1px solid #DDD;
 }
 
-.badge {
+.badge-custom {
     background-color: #E09F3E;
     color: #1A1D20;
-    padding: 4px 12px;
-    font-size: 12px;
+    padding: 6px 14px;
+    font-size: 13px;
     font-weight: bold;
     border-radius: 12px;
 }
@@ -85,32 +78,13 @@ body {
     margin: 0 auto 25px auto;
 }
 
-.tombol-banner, .tombol-banner-outline {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 22px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin: 5px;
-}
-
-.tombol-banner {
-    background-color: #6B1D2F;
-    color: #FFFFFF;
-}
-
-.tombol-banner-outline {
-    border: 2px solid #6B1D2F;
-    color: #6B1D2F;
-}
-
 .main-content, .konten {
     flex: 1;
 }
 
 .konten {
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 0 20px;
     text-align: center;
 }
@@ -118,6 +92,7 @@ body {
 .judul-bagian {
     color: #6B1D2F;
     font-size: 26px;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
@@ -127,34 +102,42 @@ body {
     margin-bottom: 30px;
 }
 
-/* 2. PERBAIKAN FLEXBOX PADA KARTU (ZONA KULINER) */
 .kartu-baris {
-    display: flex;               /* Menggunakan Flexbox */
+    display: flex;               
     justify-content: center;
-    gap: 20px;                   /* Jarak antar kartu */
-    flex-wrap: wrap;             /* Membungkus kartu ke bawah jika tidak muat */
+    gap: 20px;                   
+    flex-wrap: wrap;             
 }
 
-.kartu {
-    flex: 1 1 30%;               /* Kartu akan mengambil 30% lebar layar */
-    min-width: 250px;
+.kartu, .kartu-kontak {
+    flex: 1 1 280px;               
     background-color: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-top: 4px solid #6B1D2F;
     border-radius: 6px;
-    padding: 20px;
+    padding: 22px 18px;
     text-align: left;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.kartu h3 {
+.kartu-kontak {
+    text-align: center;
+}
+
+.kartu h3, .kartu-kontak h3 {
     color: #6B1D2F;
     margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.kartu p {
+.kartu p, .kartu-kontak p {
     font-size: 13px;
-    color: #666;
+    color: #555;
+    line-height: 1.5;
 }
 
 .kartu-item {
@@ -163,6 +146,30 @@ body {
     padding: 8px;
     border-left: 3px solid #E09F3E;
     margin-top: 15px;
+}
+
+/* Tombol Kontak */
+.tombol-detail {
+    display: inline-block;
+    background-color: #6B1D2F;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+.tombol-detail-outline {
+    display: inline-block;
+    border: 2px solid #6B1D2F;
+    color: #6B1D2F !important;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .kotak-jadwal {
@@ -190,25 +197,12 @@ body {
     margin-top: auto;
 }
 
-/* 3. MEDIA QUERY UNTUK RESPONSIVE DI HP */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;  /* Menu turun ke bawah logo di HP */
-        gap: 15px;
-        padding: 15px 20px;
-    }
-    
-    .menu {
-        flex-direction: column;  /* Menu berjejer ke bawah */
-        align-items: center;
-        gap: 10px;
-    }
-    
     .banner h1 {
-        font-size: 28px;         /* Teks dikecilkan sedikit di HP */
+        font-size: 26px;        
     }
     
-    .kartu {
-        flex: 1 1 100%;          /* Di HP, kartu memakan 100% lebar (berjejer ke bawah 1 per baris) */
+    .kartu, .kartu-kontak {
+        flex: 1 1 100%;          
     }
 }
