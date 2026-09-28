@@ -148,7 +148,6 @@ body {
     margin-top: 15px;
 }
 
-/* Tombol Kontak */
 .tombol-detail {
     display: inline-block;
     background-color: #6B1D2F;
@@ -201,7 +200,147 @@ body {
     .banner h1 {
         font-size: 26px;        
     }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9F9FB;
+    color: #1A1D20;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #6B1D2F;
+    border-bottom: 4px solid #E09F3E;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #F9F9FB;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Berkshire Swash', serif; 
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #F9F9FB;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    padding: 7px 10px;
+}
+
+.tombol-nav {
+    color: #F9F9FB !important;
+    font-weight: bold;
+}
+.konten {
+    flex: 1;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.judul-bagian {
+    color: #6B1D2F;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.subjudul {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.kartu-baris {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.kartu-kontak {
+    flex: 1 1 280px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-top: 4px solid #6B1D2F;
+    border-radius: 6px;
+    padding: 25px 15px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kartu-kontak h3 {
+    color: #6B1D2F;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.kartu-kontak p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.tombol-detail {
+    display: inline-block;
+    background-color: #6B1D2F;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    align-self: center;
+}
+
+.footer {
+    background-color: #1A1D20;
+    color: #AAA;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    border-top: 3px solid #E09F3E;
+    margin-top: auto;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
     
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .kartu-kontak {
+        flex: 1 1 100%;
+    }
+}
     .kartu, .kartu-kontak {
         flex: 1 1 100%;          
     }
